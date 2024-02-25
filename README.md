@@ -1,6 +1,14 @@
 # Warehouse Frontend
 
-## Available Scripts
+## Prerequisites
+
+```sh
+cp .env.dist .env
+```
+
+## Start project
+
+### `npm install`
 
 In the project directory, you can run:
 
