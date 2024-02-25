@@ -10,7 +10,7 @@ const ExportModal: React.FC<ExportModalProps> = ({ id, open, setOpen }) => {
   const [recordExport] = useRecordExportMutation()
   const [amount, setAmount] = useState(0)
   const [error, setError] = useState('')
-  debugger
+
   const handleRecord = () => {
     recordExport({
       variables: {
