@@ -1,0 +1,12 @@
+.layout {
+  justify-content: center;
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.content {
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
