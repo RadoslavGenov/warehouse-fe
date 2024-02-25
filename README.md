@@ -1,5 +1,15 @@
 # Warehouse Frontend
 
+Frontend client side warehouse application, which uses technologies:
+
+# React JS
+
+# Apollo Graphql Client
+
+# Ant Design
+
+# Typescript
+
 ## Prerequisites
 
 ```sh
@@ -14,7 +24,8 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs codegen to generate graphql schema types and hooks and runs the app in the development mode.
+This runs graphql codegen to generate graphql schema types and hooks && runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run build`
