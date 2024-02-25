@@ -22,8 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
 This is a simple UI app, the app is organised with the following structure:
 
 `/components` - has universal dumb components without business logic
