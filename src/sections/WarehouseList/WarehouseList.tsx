@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useWarehousesLazyQuery } from '../../gql/graphql'
 import { Button, Space, Table } from 'antd'
-import ImportModal from '../ImportModal/ImportModal'
-import ExportModal from '../ExportModal/ExportModal'
+import ImportModal from '../../modals/ImportModal/ImportModal'
+import ExportModal from '../../modals/ExportModal/ExportModal'
 import { Typography } from 'antd'
-import AddProductModal from '../AddProductModal/AddProductModal'
+import AddProductModal from '../../modals/AddProductModal/AddProductModal'
 
 const { Text } = Typography
 
@@ -88,7 +88,7 @@ const WarehouseList: React.FC = () => {
       <Space direction="vertical">
         <Space>
           {!selectedWarehouse?.id && (
-            <Text>Please Select Warehouse to add products to </Text>
+            <Text>Please select a warehouse to add products to </Text>
           )}
         </Space>
 
