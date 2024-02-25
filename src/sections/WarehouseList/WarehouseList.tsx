@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useWarehousesLazyQuery } from '../../gql/graphql'
+import {
+  useRemoveProductMutation,
+  useWarehousesLazyQuery
+} from '../../gql/graphql'
 import { Button, Space, Table } from 'antd'
 import ImportModal from '../../modals/ImportModal/ImportModal'
 import ExportModal from '../../modals/ExportModal/ExportModal'
@@ -11,10 +14,12 @@ const { Text } = Typography
 const WarehouseList: React.FC = () => {
   const [selected, setSelected] = useState('')
   const [productId, setProductId] = useState('')
-  const [getWarehouses, { data }] = useWarehousesLazyQuery()
   const [openImportModal, setOpenImportModal] = useState(false)
   const [openExporttModal, setOpenExportModal] = useState(false)
   const [openAddProducttModal, setOpenAddProductModal] = useState(false)
+
+  const [getWarehouses, { data }] = useWarehousesLazyQuery()
+  const [removeProduct] = useRemoveProductMutation()
 
   useEffect(() => {
     getWarehouses()
@@ -76,6 +81,21 @@ const WarehouseList: React.FC = () => {
               }}
             >
               Export
+            </Button>
+            <Button
+              onClick={() => {
+                if (!selectedWarehouse?.id) return
+
+                removeProduct({
+                  variables: {
+                    productId: id,
+                    warehouseId: selectedWarehouse.id
+                  },
+                  refetchQueries: ['warehouses', 'products']
+                })
+              }}
+            >
+              Remove from warehouse
             </Button>
           </Space>
         )

@@ -19,3 +19,9 @@ mutation addProduct($warehouseId: ID!, $productId: ID!) {
     id
   }
 }
+
+mutation removeProduct($warehouseId: ID!, $productId: ID!) {
+  removeProduct(warehouseId: $warehouseId, productId: $productId) {
+    id
+  }
+}

@@ -67,7 +67,12 @@ const AddProductModal: React.FC<AddProductModalProps> = ({
   ]
 
   return (
-    <Modal open={open} onCancel={handleClose} title="Unassigned Products">
+    <Modal
+      open={open}
+      onOk={handleClose}
+      onCancel={handleClose}
+      title="Unassigned Products"
+    >
       <Space direction="vertical" align="center">
         <Text>
           Unassigned Products which will be added to warehouse: {warehouseId}{' '}
