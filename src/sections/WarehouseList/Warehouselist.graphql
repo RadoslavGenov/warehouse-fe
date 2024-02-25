@@ -1,0 +1,21 @@
+query warehouses {
+  warehouses {
+    id
+    size
+    remainingSpace
+    isHazardous
+    products {
+      name
+      amount
+      id
+      description
+      isHazardous
+    }
+  }
+}
+
+mutation addProduct($warehouseId: ID!, $productId: ID!) {
+  addProduct(warehouseId: $warehouseId, productId: $productId) {
+    id
+  }
+}
