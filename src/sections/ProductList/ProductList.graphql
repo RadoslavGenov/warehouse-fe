@@ -1,0 +1,15 @@
+query products {
+  products {
+    name
+    amount
+    id
+    description
+    isHazardous
+    warehouse {
+      id
+    }
+    imports {
+      id
+    }
+  }
+}

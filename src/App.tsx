@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createElement, useState } from 'react'
+import ProductPage from './pages/ProductPage/ProductPage'
+import MainLayout from './layouts/MainLayout'
+import { Screen } from './constants'
+import WarehousePage from './pages/WarehousePage/WarehousePage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const pages = {
+  [Screen.ProductPage]: createElement(ProductPage),
+  [Screen.WarehousePage]: createElement(WarehousePage)
 }
 
-export default App;
+function App() {
+  const [activeTab, setActiveTab] = useState(Screen.ProductPage)
+
+  const handleChangeMenu = (activeScreen: Screen) => {
+    setActiveTab(activeScreen)
+  }
+
+  return (
+    <MainLayout onChangeMenu={handleChangeMenu}>{pages[activeTab]}</MainLayout>
+  )
+}
+
+export default App
