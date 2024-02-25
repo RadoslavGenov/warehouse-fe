@@ -1,0 +1,21 @@
+query history {
+  history {
+    id
+    date
+    amount
+    type
+    productName
+  }
+}
+
+mutation recordExport($id: ID!, $amount: Int!) {
+  recordExport(id: $id, amount: $amount) {
+    id
+  }
+}
+
+mutation recordImport($id: ID!, $amount: Int!, $date: DateTime!) {
+  recordImport(id: $id, amount: $amount, date: $date) {
+    id
+  }
+}
