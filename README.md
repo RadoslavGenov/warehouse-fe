@@ -2,13 +2,10 @@
 
 Frontend client side warehouse application, which uses technologies:
 
-# React JS
-
-# Apollo Graphql Client
-
-# Ant Design
-
-# Typescript
+`React JS`
+`Apollo Graphql Client`
+`Ant Design`
+`Typescript`
 
 ## Prerequisites
 
