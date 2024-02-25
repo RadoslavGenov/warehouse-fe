@@ -26,8 +26,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 This is a simple UI app, the app is organised with the following structure:
 
 `/components` - has universal dumb components without business logic
+
 `/constants` - global constants
+
 `/layouts` - layouts for the app
+
 `/pages` - every page/screem that is shown in the app
+
 `/sections` - business logic components which are part of the pages
+
 `/modals` - modal components with business logic
